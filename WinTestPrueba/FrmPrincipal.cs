@@ -15,6 +15,12 @@ namespace WinTestPrueba
         public FrmPrincProceso()
         {
             InitializeComponent();
+            InitMyComponents();
+        }
+
+        private void InitMyComponents()
+        {
+            this.Text = this.Text + " (" + this.Name + ")";
         }
     }
 }
