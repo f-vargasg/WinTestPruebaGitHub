@@ -12,6 +12,8 @@ namespace WinTestPrueba
 {
     public partial class FrmPrincProceso : Form
     {
+        List<ClienteBE> clienteList;
+
         public FrmPrincProceso()
         {
             InitializeComponent();
@@ -21,6 +23,36 @@ namespace WinTestPrueba
         private void InitMyComponents()
         {
             this.Text = this.Text + " (" + this.Name + ")";
+
+            clienteList= new List<ClienteBE>();
+
+            clienteList.Add(new ClienteBE()
+            {
+                IdCliente = 1,
+                Nombre = "Cliente1"
+            });
+
+            clienteList.Add(new ClienteBE()
+            {
+                IdCliente = 2,
+                Nombre = "Cliente2"
+            });
+
+            clienteList.Add(new ClienteBE()
+            {
+                IdCliente = 3,
+                Nombre = "Cliente2"
+            });
+
+            testCmb.DataSource= clienteList;
+            testCmb.ValueMember= "IdCliente";
+            testCmb.DisplayMember= "Nombre";
+            testCmb.DropDownStyle= ComboBoxStyle.DropDownList;
+
+            testCmb.SelectedIndex= 0;
+
+
+           
         }
     }
 }
