@@ -11,6 +11,7 @@ namespace WinTestPrueba
         public int IdCliente { get; set; }
         public string Nombre { get; set; }
 
-     
+        
+
     }
 }

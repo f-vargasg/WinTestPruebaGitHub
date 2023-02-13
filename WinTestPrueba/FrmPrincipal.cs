@@ -45,8 +45,9 @@ namespace WinTestPrueba
             });
 
             testCmb.DataSource= clienteList;
-            testCmb.ValueMember= "IdCliente";
-            testCmb.DisplayMember= "Nombre";
+            // testCmb.ValueMember= string.Empty;
+            // testCmb.ValueMember= "IdCliente";
+            // testCmb.DisplayMember= "Nombre";
             testCmb.DropDownStyle= ComboBoxStyle.DropDownList;
 
             testCmb.SelectedIndex= 0;
