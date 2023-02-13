@@ -41,7 +41,7 @@ namespace WinTestPrueba
             clienteList.Add(new ClienteBE()
             {
                 IdCliente = 3,
-                Nombre = "Cliente2"
+                Nombre = "Cliente3"
             });
 
             testCmb.DataSource= clienteList;
@@ -53,6 +53,18 @@ namespace WinTestPrueba
 
 
            
+        }
+
+        private void SetSelectedValueBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                testCmb.SelectedValue= Convert.ToInt32(valueCombo.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
